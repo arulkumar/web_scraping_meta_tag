@@ -22,7 +22,7 @@ def get_meta_title(url):
 
 dict_title = []
 
-with open('ac.csv') as csv_file:
+with open('urls.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
     for row in csv_reader:
@@ -36,7 +36,7 @@ with open('ac.csv') as csv_file:
     print(f'Processed {line_count} lines.')
 
 csv_columns = ['url','description']
-csv_file = "ac_description.csv"
+csv_file = "urls_description.csv"
 try:
   with open(csv_file, 'w') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
